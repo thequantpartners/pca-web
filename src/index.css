@@ -127,6 +127,10 @@ button {
     display: none;
   }
 
+  .deck-navigation {
+    bottom: calc(40px + env(safe-area-inset-bottom));
+  }
+
   .tablet-stage {
     display: grid;
     width: min(calc(100vw - 56px), 560px);

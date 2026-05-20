@@ -193,7 +193,7 @@ const SlideButton = forwardRef<HTMLButtonElement, SlideButtonProps>(
           dragX.set(0)
         }}
         className={cn(
-          'relative flex h-14 w-[min(90vw,387px)] max-w-[calc(100vw-32px)] items-center justify-center overflow-hidden rounded-full border border-pca-cyan/45 bg-card/95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.04),0_0_24px_rgba(0,212,255,0.15)]',
+          'relative flex h-14 w-[90vw] max-w-[calc(100vw-40px)] items-center justify-center overflow-hidden rounded-full border border-pca-cyan/45 bg-card/95 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.04),0_0_24px_rgba(0,212,255,0.15)]',
           disabled && 'opacity-50',
         )}
       >
