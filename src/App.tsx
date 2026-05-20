@@ -342,7 +342,7 @@ function App() {
             {screens.map((screen, index) => (
               <section
                 aria-label={t.nav[index]}
-                className="grid h-dvh w-screen shrink-0 place-items-center overflow-hidden px-4 py-3"
+                className="deck-screen grid h-dvh w-screen shrink-0 place-items-center overflow-hidden px-4 py-3"
                 key={t.nav[index]}
               >
                 <div className="mobile-stage">
@@ -881,9 +881,9 @@ function DeckNavigation({
       />
       </div>
       <div className="deck-progress-controls flex items-center justify-center gap-3">
-      <button
-        aria-label={labels[active - 1] ?? labels[0]}
-        className="pointer-events-auto hidden h-10 w-10 place-items-center rounded-full bg-black/70 font-mono text-pca-cyan md:grid"
+        <button
+          aria-label={labels[active - 1] ?? labels[0]}
+          className="pointer-events-auto hidden h-10 w-10 place-items-center rounded-full bg-black/70 font-mono text-pca-cyan lg:grid"
         disabled={active === 0}
         onClick={previous}
         type="button"
@@ -899,9 +899,9 @@ function DeckNavigation({
           />
         ))}
       </div>
-      <button
-        aria-label={labels[active + 1] ?? labels[labels.length - 1]}
-        className="pointer-events-auto hidden h-10 w-10 place-items-center rounded-full bg-black/70 font-mono text-pca-cyan md:grid"
+        <button
+          aria-label={labels[active + 1] ?? labels[labels.length - 1]}
+          className="pointer-events-auto hidden h-10 w-10 place-items-center rounded-full bg-black/70 font-mono text-pca-cyan lg:grid"
         disabled={active === labels.length - 1}
         onClick={next}
         type="button"
