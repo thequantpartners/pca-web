@@ -446,7 +446,7 @@ function DesktopHome() {
               </p>
             </TerminalCard>
             <button
-              className="desktop-install"
+              className="install-cta desktop-install"
               onClick={() => copyInstall(() => undefined)}
               type="button"
             >
@@ -546,7 +546,7 @@ function Hero({
 
         <div className="grid gap-[clamp(10px,1.8svh,15px)]">
           <button
-            className="min-h-[58px] w-full rounded-lg bg-pca-cyan px-5 font-mono text-[clamp(19px,5.1vw,24px)] font-bold text-black shadow-button transition hover:bg-[#5eeaff]"
+            className="install-cta min-h-[58px] w-full px-5 font-mono text-[clamp(19px,5.1vw,24px)] font-bold"
             onClick={() => copyInstall(setCopied)}
             type="button"
           >
@@ -706,7 +706,7 @@ function Install({
       <h2 className="pixel-title text-[clamp(44px,12vw,56px)] leading-[1.08] text-pca-cyan">{t.install.title}</h2>
       <p className="mt-5 font-sans text-[clamp(15px,4vw,19px)] leading-relaxed text-pca-muted">{t.install.body}</p>
       <button
-        className="mt-8 min-h-[70px] w-full rounded-lg bg-pca-cyan px-5 font-mono text-[clamp(20px,5.6vw,30px)] font-bold text-black shadow-button transition hover:bg-[#5eeaff]"
+        className="install-cta mt-8 min-h-[70px] w-full px-5 font-mono text-[clamp(20px,5.6vw,30px)] font-bold"
         onClick={() => copyInstall(setCopied)}
         type="button"
       >
