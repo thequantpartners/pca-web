@@ -387,62 +387,12 @@ button {
 
   .desktop-browser {
     display: grid;
-    grid-template-rows: auto auto minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
     overflow: hidden;
     border: 0;
     border-radius: 0;
     background: #0a0a0f;
     box-shadow: none;
-  }
-
-  .browser-chrome {
-    display: grid;
-    grid-template-columns: auto minmax(0, 240px) 1fr;
-    align-items: center;
-    gap: 14px;
-    height: 52px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(17, 24, 39, 0.84);
-    padding: 0 16px;
-  }
-
-  .browser-dots {
-    display: flex;
-    gap: 8px;
-  }
-
-  .browser-dots span {
-    width: 12px;
-    height: 12px;
-    border-radius: 999px;
-  }
-
-  .browser-dots span:nth-child(1) {
-    background: #ff5f57;
-  }
-
-  .browser-dots span:nth-child(2) {
-    background: #ffbd2e;
-  }
-
-  .browser-dots span:nth-child(3) {
-    background: #28c840;
-  }
-
-  .browser-tab {
-    overflow: hidden;
-    border-radius: 9px;
-    background: rgba(255, 255, 255, 0.06);
-    padding: 10px 14px;
-    color: white;
-    font-size: 13px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .browser-plus {
-    color: #a7a7ad;
-    font-size: 24px;
   }
 
   .browser-address {
@@ -616,16 +566,8 @@ button {
     padding: 20px clamp(42px, 5vw, 76px) 56px;
   }
 
-  .browser-chrome {
-    height: 42px;
-  }
-
   .browser-address {
     min-height: 38px;
-  }
-
-  .browser-tab {
-    padding: 7px 12px;
   }
 
   .browser-address div {

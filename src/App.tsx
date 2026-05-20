@@ -427,15 +427,6 @@ function DesktopHome() {
 
   return (
     <div className="desktop-browser">
-      <div className="browser-chrome">
-        <div className="browser-dots">
-          <span />
-          <span />
-          <span />
-        </div>
-        <div className="browser-tab">PCA - Git for AI context</div>
-        <div className="browser-plus">+</div>
-      </div>
       <div className="browser-address">
         <span>←</span>
         <span>→</span>
