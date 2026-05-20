@@ -364,6 +364,10 @@ button {
     display: flex;
   }
 
+  .deck-progress-controls.desktop-hidden {
+    display: none;
+  }
+
   .deck-swipe-control {
     display: none;
   }
@@ -426,9 +430,9 @@ button {
   .desktop-home-content {
     min-height: 0;
     overflow: hidden;
-    width: min(100%, 1440px);
+    width: min(100%, 1280px);
     margin: 0 auto;
-    padding: clamp(34px, 4vw, 72px) clamp(48px, 7vw, 112px) 72px;
+    padding: clamp(30px, 4vw, 62px) clamp(48px, 6vw, 96px) 36px;
   }
 
   .desktop-home-top {
@@ -441,24 +445,25 @@ button {
   }
 
   .desktop-hero-grid {
-    margin-top: clamp(20px, 3dvh, 34px);
+    margin-top: clamp(16px, 2.4dvh, 26px);
     display: grid;
     place-items: center;
     text-align: center;
   }
 
   .desktop-hero-grid > div {
-    width: min(100%, 980px);
+    width: min(100%, 1240px);
   }
 
   .desktop-hero-grid h1 {
-    font-size: clamp(64px, 5.5vw, 104px);
+    font-size: clamp(54px, 4.8vw, 82px);
     line-height: 1.05;
+    white-space: nowrap;
   }
 
   .desktop-subtext,
   .desktop-command-muted {
-    margin-top: 14px;
+    margin-top: 10px;
     color: #a7a7ad;
     font-family: "Space Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
     font-size: clamp(15px, 1.5vw, 19px);
@@ -466,7 +471,7 @@ button {
 
   .desktop-terminal {
     width: min(100%, 720px);
-    margin-top: 20px;
+    margin-top: 16px;
     margin-right: auto;
     margin-left: auto;
     padding: 18px 22px;
@@ -476,8 +481,8 @@ button {
 
   .desktop-install {
     width: min(100%, 520px);
-    min-height: 58px;
-    margin-top: 20px;
+    min-height: 54px;
+    margin-top: 16px;
     margin-right: auto;
     margin-left: auto;
     border-radius: 8px;
@@ -490,13 +495,13 @@ button {
 
   .desktop-github {
     display: block;
-    margin-top: 18px;
+    margin-top: 12px;
     color: #00d4ff;
     font-family: "Space Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
   }
 
   .desktop-problem-block {
-    margin-top: clamp(22px, 3dvh, 34px);
+    margin-top: clamp(18px, 2.4dvh, 26px);
     border-top: 1px solid rgba(0, 212, 255, 0.16);
     padding-top: clamp(18px, 2.4dvh, 28px);
   }
@@ -515,7 +520,7 @@ button {
   }
 
   .desktop-problem-grid .problem-summary-card {
-    min-height: 128px;
+    min-height: 108px;
     grid-template-columns: 52px 1fr;
   }
 
