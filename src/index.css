@@ -387,7 +387,7 @@ button {
 
   .desktop-browser {
     display: grid;
-    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
     overflow: hidden;
     border: 0;
     border-radius: 0;
@@ -396,7 +396,7 @@ button {
   }
 
   .browser-address {
-    display: grid;
+    display: none;
     grid-template-columns: auto auto auto minmax(0, 1fr);
     align-items: center;
     gap: 16px;
@@ -564,14 +564,6 @@ button {
 
   .desktop-home-content {
     padding: 20px clamp(42px, 5vw, 76px) 56px;
-  }
-
-  .browser-address {
-    min-height: 38px;
-  }
-
-  .browser-address div {
-    padding: 6px 12px;
   }
 
   .desktop-home-top {
