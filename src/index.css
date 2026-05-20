@@ -39,7 +39,7 @@ button {
 
 .mobile-stage {
   display: grid;
-  width: 100%;
+  width: min(calc(100vw - 28px), 430px);
   place-items: center;
 }
 
@@ -50,7 +50,7 @@ button {
 
 .phone-shell {
   position: relative;
-  width: min(100%, 430px);
+  width: 100%;
   height: min(100dvh - 24px, 900px);
   min-height: 640px;
   overflow: hidden;
@@ -105,6 +105,27 @@ button {
   font-weight: 700;
   letter-spacing: 0;
   text-shadow: 0 0 14px rgba(0, 212, 255, 0.28);
+}
+
+.brand-logo-button {
+  display: inline-flex;
+  width: fit-content;
+  max-width: min(44vw, 170px);
+  align-items: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.brand-logo {
+  display: block;
+  width: clamp(128px, 15vw, 196px);
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-logo-compact {
+  width: clamp(104px, 28vw, 146px);
 }
 
 .terminal-line-static + .terminal-line-static {

@@ -375,7 +375,7 @@ function PhoneScreen({ children }: { children: ReactNode }) {
     <div className="phone-shell">
       <div className="phone-notch" />
       <div className="screen-texture" />
-      <div className="relative z-10 flex h-full min-h-0 flex-col px-[28px] pb-[112px] pt-[38px] sm:px-[34px] sm:pb-[122px] sm:pt-[48px]">
+      <div className="relative z-10 flex h-full min-h-0 flex-col px-[24px] pb-[112px] pt-[38px] sm:px-[34px] sm:pb-[122px] sm:pt-[48px]">
         {children}
       </div>
     </div>
@@ -429,7 +429,7 @@ function DesktopHome() {
       </div>
       <div className="desktop-home-content">
         <header className="desktop-home-top">
-          <span>PCA</span>
+          <BrandLogo />
           <LanguageInline />
         </header>
         <section className="desktop-hero-grid">
@@ -468,6 +468,17 @@ function DesktopHome() {
         </section>
       </div>
     </div>
+  )
+}
+
+function BrandLogo({ compact = false }: { compact?: boolean }) {
+  return (
+    <img
+      alt="PCA - Git for AI context"
+      className={compact ? 'brand-logo brand-logo-compact' : 'brand-logo'}
+      decoding="async"
+      src="/pca-logo.png"
+    />
   )
 }
 
@@ -525,7 +536,7 @@ function Hero({
       <TopBar />
       <div className="grid min-h-0 flex-1 content-center gap-[clamp(18px,3.1svh,26px)] pb-2 pt-[clamp(28px,4.8svh,42px)]">
         <div>
-          <h1 className="pixel-title text-[clamp(44px,12.7vw,56px)] leading-[1.08] text-pca-cyan">
+          <h1 className="pixel-title text-[clamp(44px,11.4vw,56px)] leading-[1.08] text-pca-cyan">
             <span className="block">{t.hero.headlineTop}</span>
             <span className="block">{t.hero.headlineBottom}</span>
           </h1>
@@ -581,10 +592,10 @@ function TopBar() {
     <header className="flex shrink-0 items-center justify-between">
       <button
         aria-label="PCA"
-        className="font-mono text-[clamp(28px,7.8vw,38px)] font-bold leading-none text-white"
+        className="brand-logo-button"
         type="button"
       >
-        PCA
+        <BrandLogo compact />
       </button>
       <div aria-label={t.meta.language} className="flex items-center gap-2 font-mono text-[clamp(12px,3.4vw,16px)]">
         <button
