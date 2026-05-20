@@ -442,6 +442,13 @@ button {
 
   .desktop-hero-grid {
     margin-top: clamp(20px, 3dvh, 34px);
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  .desktop-hero-grid > div {
+    width: min(100%, 980px);
   }
 
   .desktop-hero-grid h1 {
@@ -460,7 +467,10 @@ button {
   .desktop-terminal {
     width: min(100%, 720px);
     margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
     padding: 18px 22px;
+    text-align: left;
     font-size: 15px;
   }
 
@@ -468,6 +478,8 @@ button {
     width: min(100%, 520px);
     min-height: 58px;
     margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
     border-radius: 8px;
     background: #00d4ff;
     color: #000;
@@ -477,7 +489,7 @@ button {
   }
 
   .desktop-github {
-    display: inline-block;
+    display: block;
     margin-top: 18px;
     color: #00d4ff;
     font-family: "Space Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
@@ -492,6 +504,7 @@ button {
   .desktop-problem-block h2 {
     font-size: clamp(28px, 2.6vw, 36px);
     line-height: 1.08;
+    text-align: center;
   }
 
   .desktop-problem-grid {
