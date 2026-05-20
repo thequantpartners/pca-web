@@ -131,6 +131,10 @@ button {
     bottom: calc(40px + env(safe-area-inset-bottom));
   }
 
+  .deck-swipe-control > div {
+    width: min(90vw, 504px);
+  }
+
   .tablet-stage {
     display: grid;
     width: min(calc(100vw - 56px), 560px);
