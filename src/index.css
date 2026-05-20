@@ -364,10 +364,6 @@ button {
     display: flex;
   }
 
-  .deck-progress-controls.desktop-hidden {
-    display: none;
-  }
-
   .deck-swipe-control {
     display: none;
   }

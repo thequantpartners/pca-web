@@ -360,7 +360,6 @@ function App() {
         <DeckNavigation
           active={active}
           labels={t.nav}
-          showDesktopControls={active !== 0}
           isLast={active === max}
           next={next}
           previous={previous}
@@ -800,7 +799,6 @@ function DeckNavigation({
   next,
   previous,
   restart,
-  showDesktopControls,
 }: {
   active: number
   isLast: boolean
@@ -808,7 +806,6 @@ function DeckNavigation({
   next: () => void
   previous: () => void
   restart: () => void
-  showDesktopControls: boolean
 }) {
   const { t } = useLanguage()
 
@@ -823,7 +820,7 @@ function DeckNavigation({
         onSlideComplete={isLast ? restart : next}
       />
       </div>
-      <div className={`deck-progress-controls ${showDesktopControls ? '' : 'desktop-hidden'} flex items-center justify-center gap-3`}>
+      <div className="deck-progress-controls flex items-center justify-center gap-3">
         <button
           aria-label={labels[active - 1] ?? labels[0]}
           className="pointer-events-auto hidden h-10 w-10 place-items-center rounded-full bg-black/70 font-mono text-pca-cyan lg:grid"
