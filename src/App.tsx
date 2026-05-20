@@ -348,7 +348,7 @@ function App() {
                 <div className="mobile-stage">
                   <PhoneScreen>{screen}</PhoneScreen>
                 </div>
-                <TabletStage active={index}>{screen}</TabletStage>
+                <TabletStage>{screen}</TabletStage>
                 <DesktopStage active={index}>
                   {screen}
                 </DesktopStage>
@@ -382,17 +382,11 @@ function PhoneScreen({ children }: { children: ReactNode }) {
   )
 }
 
-function TabletStage({
-  active,
-  children,
-}: {
-  active: number
-  children: ReactNode
-}) {
+function TabletStage({ children }: { children: ReactNode }) {
   return (
     <div className="tablet-stage">
       <div className="tablet-shell">
-        {active === 0 ? <TabletHome /> : <div className="tablet-content">{children}</div>}
+        <div className="tablet-content">{children}</div>
       </div>
     </div>
   )
@@ -473,51 +467,6 @@ function DesktopHome() {
           </div>
         </section>
       </div>
-    </div>
-  )
-}
-
-function TabletHome() {
-  const { t } = useLanguage()
-
-  return (
-    <div className="tablet-home">
-      <header className="tablet-home-top">
-        <span>PCA</span>
-        <span className="tablet-menu">≡</span>
-        <LanguageInline />
-      </header>
-      <section>
-        <h1 className="pixel-title text-pca-cyan">
-          <span>{t.hero.headlineTop}</span>
-          <span>{t.hero.headlineBottom}</span>
-        </h1>
-        <p className="tablet-subtext">{t.hero.subtext}</p>
-        <TerminalCard className="tablet-terminal">
-          <p>
-            <span className="text-pca-cyan">$</span>{' '}
-            <span>{t.hero.command.slice(2)}</span>
-          </p>
-          <p className="mt-3 text-pca-cyan">
-            <span aria-hidden="true">&#10003;</span> {t.hero.committed}
-          </p>
-        </TerminalCard>
-        <button className="tablet-install" onClick={() => copyInstall(() => undefined)} type="button">
-          {t.hero.install}
-        </button>
-        <p className="tablet-command-muted">{installCommand}</p>
-        <a className="tablet-github" href={githubUrl} rel="noreferrer" target="_blank">
-          {t.hero.github} →
-        </a>
-      </section>
-      <section className="tablet-problem-block">
-        <h2 className="pixel-title text-pca-cyan">{t.problem.titleTop} {t.problem.titleMiddle} {t.problem.titleBottom}</h2>
-        <div className="tablet-problem-list">
-          {t.problem.items.map((item, index) => (
-            <ProblemSummaryCard index={index} item={item} key={item.text} />
-          ))}
-        </div>
-      </section>
     </div>
   )
 }
